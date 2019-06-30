@@ -1,0 +1,30 @@
+<% include ../partials/header%>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to YelpCamp!</h1>
+            <p>View our hand-picked campgrounds from all over the world</p>
+            <hr class="my-4">
+            <p><a class="btn btn-large btn-primary" href="/campgrounds/new">Add new campground</a></p>
+            <form action="/campgrounds" method="GET" class="form-inline" id="campground-search">
+                <div class="form-group">
+                    <input type="text" name="search" placeholder="Campground search..." class="form-control">
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <div class="card-columns" id="campground-grid">
+        <% campgrounds.forEach(function(campground){ %>
+        <div class="card">
+            <img class="card-img-top" src="<%=campground.image %>">
+            <div class="text-center card-body">
+                <h5 class="card-title"><%=campground.name%></h5>
+                <a class="btn btn-primary btn-sm" href="/campgrounds/<%=campground._id%>">More Info</a>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+</div>
+<% include ../partials/footer%>

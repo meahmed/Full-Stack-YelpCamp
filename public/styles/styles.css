@@ -1,0 +1,16 @@
+.jumbotron {
+    padding: 2rem;
+}
+
+nav {
+    margin-bottom: 2rem;
+}
+
+#comments-section {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem
+}
+
+#formDeleteBtn {
+    display: inline;
+}
